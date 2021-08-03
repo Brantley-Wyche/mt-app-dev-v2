@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import LocationPicker from '@/components/LocationPicker'
 import Results from '@/components/Results'
+import SearchingFor from '@/components/SearchingFor'
+
 
 Vue.use(Router)
 
@@ -25,6 +27,12 @@ export default new Router({
       name: "Location",
       component: LocationPicker,
     },
+    {
+      path: '/Search',
+      name: 'SearchingFor',
+      component: SearchingFor
+    },
+    
     {
       path: "/results",
       name: "Results",

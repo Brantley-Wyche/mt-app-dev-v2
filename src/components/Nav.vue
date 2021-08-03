@@ -26,9 +26,14 @@ export default {
         },
         {
           id: 2,
-          text: 'SearchingFor',
+          text: 'Searching For',
           page:'/Search/'
         },
+        {
+          id: 3,
+          text: 'Result',
+          page: '/results/'
+        }
       ]
     }
   }
@@ -54,15 +59,11 @@ li {
   color: white;
   font-size: 18px;
 }
-nav{
-    padding-top: 20px;
-    background-color: black;
-    padding-bottom: 20px;
-}
 /* Add a black background color to the top navigation */
 nav {
-  background-color: #333;
+  background-color: #137d1d;
   overflow: hidden;
+  padding: 2em;
 }
 
 /* Style the links inside the navigation bar */
@@ -70,20 +71,21 @@ nav a {
   float: middle;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 50px;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 /* Change the color of links on hover */
 nav a:hover {
-  background-color: #ddd;
+  background-color: #dddddd6b;
   color: black;
 }
 
 /* Add a color to the active/current link */
 nav a.active {
-  background-color: #04AA6D;
+  background-color: #c6da13;
   color: white;
 }
 </style>
