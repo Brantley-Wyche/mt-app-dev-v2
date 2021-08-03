@@ -1,6 +1,6 @@
 <template>
   <div> 
-  <nav> 
+  <nav > 
     <router-link v-for="routes in links" 
       v-bind:key="routes.id"
       :to="`${routes.page}`">{{routes.text}}</router-link>
@@ -16,8 +16,18 @@ export default {
       links: [
         {
           id: 0,
+          text: 'Home',
+          page:'/'
+        },
+        {
+          id: 1,
           text: 'Location',
-          page:'/location/',
+          page:'/location/'
+        },
+        {
+          id: 2,
+          text: 'SearchingFor',
+          page:'/Search/'
         },
       ]
     }
@@ -49,9 +59,31 @@ nav{
     background-color: black;
     padding-bottom: 20px;
 }
+/* Add a black background color to the top navigation */
+nav {
+  background-color: #333;
+  overflow: hidden;
+}
 
-a{
+/* Style the links inside the navigation bar */
+nav a {
+  float: middle;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
+  font-size: 30px;
+}
+
+/* Change the color of links on hover */
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+nav a.active {
+  background-color: #04AA6D;
   color: white;
 }
 </style>
