@@ -2,7 +2,6 @@
   <div class="hello">
     <img alt="MT logo" src="../assets/green-logo.png">
     <!--<router-link :to="{name: 'Location', params: {hey}}">LOCATION</router-link>-->
-    <router-link to="/results">LOCATION</router-link>
     <div class="square">
       <div class="content">
         <h1>Please Login</h1>
@@ -16,8 +15,9 @@
 
         <p v-if="highlight" id="wrong_credentials">Please enter valid credentials</p>
         
-        <!--<button class="login_button" @click="getValues()"><router-link to="/location">Login</router-link></button>-->
         <button class="login_button" @click="validateCredentials()">Login</button>
+        <button @click="chooseCity(1)">BUFFALO</button>
+        <button @click="chooseCity(2)">Wilmington</button>
       </div>
     </div>
   </div>
@@ -33,7 +33,7 @@ export default {
   data() {
     return {
       highlight: false,
-      //hey: 'buffalo',
+      city: '',
     }
   },
   methods: {
@@ -42,12 +42,22 @@ export default {
       let pwd = document.querySelector('#PASSWORD').value;
       if((lanID == 'TDEVR0X' && pwd == 'password') || (lanID == 'TDEVR0Z' && pwd == 'otherpassword')){
         this.highlight = false;
+        this.$router.push(`/results/${this.city}`);
       }
       else{
         this.highlight = true;
       }
     },
-    
+    chooseCity(i){
+      if(i == 1){
+        this.city = 'buffalo';
+        console.log(this.city);
+      }
+      else if(i == 2){
+        this.city = 'wilmington';
+        console.log(this.city);
+      }
+    }
   }
 }
 

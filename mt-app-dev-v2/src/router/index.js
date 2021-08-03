@@ -26,9 +26,10 @@ export default new Router({
       component: LocationPicker,
     },
     {
-      path: "/results",
+      path: "/results/:city",
       name: "Results",
-      component: Results
+      component: Results,
+      props: true,
     }
       
     ]
