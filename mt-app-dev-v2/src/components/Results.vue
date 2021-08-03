@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-  <router-link to="/">HOME</router-link>
+    <Nav />
 
     <b-container class="bv-example-row">
       <b-row>
@@ -50,12 +50,11 @@
               class="mb-2">
               
               <b-card-text class="left">
-                <p><b>Natalie S:</b> "This place is great! I had a lot of fun!"</p>
+                <p><b>Natalie S :</b> "This place is great! I had a lot of fun!"</p>
                 <hr />
-                <p><b>Zachary L:</b> "Amazing vibes, I love it here."</p>
+                <p><b>Zachary L :</b> "Amazing vibes, I love it here."</p>
                 <hr />
-                <p><b>Anna C:</b> "I'm definitely bringing my friends here next time!!"</p>
-                <hr />
+                <p><b>Anna C :</b> "I'm definitely bringing my friends here next time!!"</p>
               </b-card-text>
             </b-card>
           </div>
@@ -68,14 +67,17 @@
 <script>
 import {gmapApi} from 'vue2-google-maps'
 import axios from "axios";
+import Nav from './Nav.vue'
 
 export default {
   name: 'Results',
+  components: {Nav},
+  props: ['city', 'event'],
   data(){
     return{
       lat: null,
       lng: null,
-      type: "restaurant",
+      type: this.event,
       places: [],
       showDetails: false,
       selectedPlace: {},
@@ -143,7 +145,6 @@ export default {
         this.showDetails = true;
      }
     },
-    props: ['city'],
 }
 </script>
 
