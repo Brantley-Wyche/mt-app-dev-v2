@@ -60,17 +60,28 @@ export default {
     font-size: 40px;
     margin-left: 200px;
     float: left;
+    transition: transform .3s; /* Animation */
+}
+.events-search:hover{
+    transform: scale(1.2);
 }
 .house-search{
     font-size: 40px;
     float: left;
     margin-left: 200px;
+    transition: transform .3s; /* Animation */
 }
-
+.house-search:hover{
+    transform: scale(1.2);
+}
 .restaurants-search{
     font-size: 40px;
     float: right;
     margin-right: 200px;
+    transition: transform .3s; /* Animation */
+}
+.restaurants-search:hover{
+    transform: scale(1.2);
 }
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }

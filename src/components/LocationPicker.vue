@@ -28,20 +28,6 @@
     </div> <!-- end of body div-->
 </template>
 
-<script>
-  export default {
-    methods: {
-      hoverHandler(isHovered) {
-        if (isHovered) {
-          // Do something
-        } else {
-          // Do something else
-        }
-      }
-    }
-  }
-</script>
-
 <style scoped>
 .choose-location{
     font-family: 'Roboto', sans-serif;
@@ -52,12 +38,20 @@
     margin-left: 300px;
     float: left;
     font-size: 40px;
+    transition: transform .3s; /* Animation */
+}
+.buffalo-name:hover{
+    transform: scale(1.2);
 }
 
 .delaware-name{
     font-size: 40px;
     float: right;
     margin-right: 300px;
+    transition: transform .3s; /* Animation */
+}
+.delaware-name:hover{
+    transform: scale(1.2);
 }
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }

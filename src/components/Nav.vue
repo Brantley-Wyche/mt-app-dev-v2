@@ -63,7 +63,8 @@ li {
 nav {
   background-color: #137d1d;
   overflow: hidden;
-  padding: 2em;
+  padding: 1em;
+  border-bottom: 8px solid rgb(238, 241, 13);
 }
 
 /* Style the links inside the navigation bar */
@@ -79,8 +80,8 @@ nav a {
 
 /* Change the color of links on hover */
 nav a:hover {
-  background-color: #dddddd6b;
-  color: black;
+  border-bottom: 3px solid rgb(238, 241, 13);
+  color: rgb(63, 216, 17);
 }
 
 /* Add a color to the active/current link */
